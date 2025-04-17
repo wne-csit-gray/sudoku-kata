@@ -7,6 +7,9 @@ public class Board {
     }
 
     public void fill(){
-        
+    }
+
+    public int positionValue(int row, int column){
+        return 0;
     }
 }
