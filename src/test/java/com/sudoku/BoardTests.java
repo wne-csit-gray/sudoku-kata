@@ -13,7 +13,7 @@ public class BoardTests {
         Board b = new Board(size);
         b.fill();
         checkAllPositionsNotNull(b);
-        checkAllRowsEachPositionAppearsOnce(b);
+        checkAllColumnsEachPositionAppearsOnce(b);
     }
 
     void checkAllPositionsNotNull(Board b){
@@ -24,15 +24,15 @@ public class BoardTests {
         }
     }
 
-    void checkAllRowsEachPositionAppearsOnce(Board b){
-        for (int j = 0; ;j < b.size; j++){
+    void checkAllColumnsEachPositionAppearsOnce(Board b){
+        for (int j = 0;j < b.size; j++){
             boolean[] found = new boolean[b.size];
             for (int i = 0; i < b.size; i++){
                 int val = b.positionValue(i, j);
-                if (found[val]){
+                if (found[val-1]){
                     assertTrue(false);
                 }
-                found[val] = true;
+                found[val-1] = true;
             }
         }
     }
