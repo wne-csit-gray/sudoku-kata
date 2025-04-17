@@ -7,5 +7,6 @@ public class BoardTests {
     @Test
     public void createBoard(){
         Board b = new Board(9);
+        b.fill();
     }
 }
