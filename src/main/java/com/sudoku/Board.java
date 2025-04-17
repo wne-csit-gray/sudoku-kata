@@ -5,4 +5,8 @@ public class Board {
     Board(int edgeSize){
         size = edgeSize;
     }
+
+    public void fill(){
+        
+    }
 }
